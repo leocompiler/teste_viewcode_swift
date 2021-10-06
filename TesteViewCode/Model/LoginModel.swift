@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct LoginModel : Model{
+    var login: String
+    var password: String
+    
+}
