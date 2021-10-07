@@ -21,6 +21,7 @@
 		939CFFB4270CEEC100BD7F7B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB3270CEEC100BD7F7B /* LoginModel.swift */; };
 		939CFFB6270CF18700BD7F7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB5270CF18700BD7F7B /* HomeViewController.swift */; };
 		939CFFB8270CF21500BD7F7B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB7270CF21500BD7F7B /* Model.swift */; };
+		939CFFBA270E3CB900BD7F7B /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB9270E3CB900BD7F7B /* HomeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		939CFFB3270CEEC100BD7F7B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		939CFFB5270CF18700BD7F7B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		939CFFB7270CF21500BD7F7B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		939CFFB9270E3CB900BD7F7B /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				939CFFAF270CE2E600BD7F7B /* LoginViewController.swift */,
 				939CFFB5270CF18700BD7F7B /* HomeViewController.swift */,
+				939CFFB9270E3CB900BD7F7B /* HomeItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				939CFF75270BB86400BD7F7B /* AppDelegate.swift in Sources */,
 				939CFFB4270CEEC100BD7F7B /* LoginModel.swift in Sources */,
 				939CFFB6270CF18700BD7F7B /* HomeViewController.swift in Sources */,
+				939CFFBA270E3CB900BD7F7B /* HomeItem.swift in Sources */,
 				939CFFB2270CEE8100BD7F7B /* LoginViewModel.swift in Sources */,
 				939CFFB0270CE2E600BD7F7B /* LoginViewController.swift in Sources */,
 				939CFFB8270CF21500BD7F7B /* Model.swift in Sources */,
