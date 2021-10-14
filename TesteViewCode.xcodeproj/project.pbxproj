@@ -22,6 +22,8 @@
 		939CFFB6270CF18700BD7F7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB5270CF18700BD7F7B /* HomeViewController.swift */; };
 		939CFFB8270CF21500BD7F7B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB7270CF21500BD7F7B /* Model.swift */; };
 		939CFFBA270E3CB900BD7F7B /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB9270E3CB900BD7F7B /* HomeItem.swift */; };
+		939CFFBC270F22D200BD7F7B /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFBB270F22D200BD7F7B /* ItemModel.swift */; };
+		939CFFBE270F289C00BD7F7B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFBD270F289C00BD7F7B /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		939CFFB5270CF18700BD7F7B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		939CFFB7270CF21500BD7F7B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		939CFFB9270E3CB900BD7F7B /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		939CFFBB270F22D200BD7F7B /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		939CFFBD270F289C00BD7F7B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				939CFFB1270CEE8100BD7F7B /* LoginViewModel.swift */,
+				939CFFBD270F289C00BD7F7B /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 			children = (
 				939CFFB7270CF21500BD7F7B /* Model.swift */,
 				939CFFB3270CEEC100BD7F7B /* LoginModel.swift */,
+				939CFFBB270F22D200BD7F7B /* ItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,7 +314,9 @@
 				939CFFB4270CEEC100BD7F7B /* LoginModel.swift in Sources */,
 				939CFFB6270CF18700BD7F7B /* HomeViewController.swift in Sources */,
 				939CFFBA270E3CB900BD7F7B /* HomeItem.swift in Sources */,
+				939CFFBC270F22D200BD7F7B /* ItemModel.swift in Sources */,
 				939CFFB2270CEE8100BD7F7B /* LoginViewModel.swift in Sources */,
+				939CFFBE270F289C00BD7F7B /* HomeViewModel.swift in Sources */,
 				939CFFB0270CE2E600BD7F7B /* LoginViewController.swift in Sources */,
 				939CFFB8270CF21500BD7F7B /* Model.swift in Sources */,
 				939CFFA8270CDBA600BD7F7B /* MainCoordinator.swift in Sources */,

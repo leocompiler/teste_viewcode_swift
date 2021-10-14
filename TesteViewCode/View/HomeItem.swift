@@ -27,7 +27,7 @@ final class HomeItem : UITableViewCell {
         title.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         
-        subTitle.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: 10).isActive = true
+        subTitle.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 10).isActive = true
         subTitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
         subTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
 

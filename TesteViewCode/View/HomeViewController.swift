@@ -12,7 +12,7 @@ final class HomeViewController : UIViewController {
     
      
     
-    private let model : Model?;
+    private let viewModel : HomeViewModel?;
     
     lazy var titleScreen: UILabel = {
         let titleScreen = UILabel( frame: .zero)
@@ -26,12 +26,16 @@ final class HomeViewController : UIViewController {
         
     }()
     
-    init( route: Coordinator) {
-        self.model = nil
+    init(_ route: Coordinator) {
+        //example list Itens
+        let item = ItemModel.init(title: "teste_1", subTile: "subTitle_1", iconImage: "https://picsum.photos/200")
+        let arrayItens = [ item, item , item ]
+        
+        self.viewModel = HomeViewModel( coordinator: route , model: arrayItens )
         super.init(nibName: nil, bundle: nil)
     }
-    init( route: Coordinator,  viewModel : Model) {
-        self.model = viewModel
+    init( route: Coordinator,  viewModel : HomeViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,12 +49,18 @@ final class HomeViewController : UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        view.addSubview(tableView)
+        tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive  = true
+        tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        
     }
 }
 
 
 
-extension HomeViewController: EmployeeViewModelDelegate {
+extension HomeViewController: HomeViewDelegate {
     func reloadUI() {
         tableView.reloadData()
     }
@@ -61,19 +71,30 @@ extension HomeViewController: UITableViewDelegate {
 }
 
 extension HomeViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows()
+        return viewModel!.numberOfRows()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = EmployeeCell()
-        cell.nameLabel.text = viewModel.name(at: indexPath.row)
-        cell.cargoLabel.text = viewModel.cargo(at: indexPath.row)
-        cell.photo.image = UIImage(named: viewModel.foto(at: indexPath.row))
+        let cell = HomeItem()
+         
+        cell.title.text = viewModel?.title(at: indexPath.row)
+        cell.subTitle.text = viewModel?.subTitle(at: indexPath.row)
+        cell.iconImage.image = icon( (viewModel?.iconImage(at: indexPath.row))! )
+        
         cell.setUpCell()
 
         return cell
     }
 
 
+    func icon(_ urlImage : String ) -> UIImage {
+        guard let image = UIImage(named: urlImage) else {
+            //assertionFailure(​ "Missing ​​" + urlImage + "​ asset"​)
+            print("empty urlImage")
+            return UIImage(named: "Default")!
+        }
+        return image
+    }
 }

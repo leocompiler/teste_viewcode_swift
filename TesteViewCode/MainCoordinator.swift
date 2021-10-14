@@ -29,10 +29,10 @@ class MainCoordinator: Coordinator {
     
     func routingScreen( router: ROUTER ){
         switch router {
-        case ROUTER.HOME : return navigationController.pushViewController(HomeViewController(route: self ), animated: true)
+        case ROUTER.HOME : return navigationController.pushViewController(HomeViewController( self ), animated: true)
          
         default:
-            return navigationController.pushViewController(HomeViewController(route: self ), animated: true)
+            return navigationController.pushViewController(HomeViewController( self ), animated: true)
             
             
         }
