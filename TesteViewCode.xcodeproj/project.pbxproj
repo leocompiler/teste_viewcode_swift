@@ -127,7 +127,6 @@
 				939CFF85270BB86500BD7F7B /* Info.plist */,
 				939CFF7D270BB86400BD7F7B /* TesteViewCode.xcdatamodeld */,
 				939CFFA7270CDBA600BD7F7B /* MainCoordinator.swift */,
-				939CFFA9270CDBD500BD7F7B /* Coordinator.swift */,
 			);
 			path = TesteViewCode;
 			sourceTree = "<group>";
@@ -172,6 +171,7 @@
 		939CFFAE270CE2B700BD7F7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				939CFFA9270CDBD500BD7F7B /* Coordinator.swift */,
 				939CFFB7270CF21500BD7F7B /* Model.swift */,
 				939CFFB3270CEEC100BD7F7B /* LoginModel.swift */,
 				939CFFBB270F22D200BD7F7B /* ItemModel.swift */,

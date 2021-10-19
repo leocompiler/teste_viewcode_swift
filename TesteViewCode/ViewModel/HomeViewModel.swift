@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeViewDelegate: class {
     func reloadUI()
@@ -38,8 +39,8 @@ final class HomeViewModel {
     }
     public func iconImage( at index:Int) -> String{
         return model[index].iconImage
-        
-
     }
+    
+    
 
 }

@@ -10,9 +10,26 @@ import UIKit
 
 final class HomeItem : UITableViewCell {
     
-    var title : UILabel = { return UILabel(frame: .zero)}()
-    var subTitle : UILabel = { return UILabel(frame: .zero)}()
-    var iconImage : UIImageView = { return UIImageView(frame: .zero)}()
+ 
+        public lazy var title: UILabel = {
+           let title = UILabel(frame: .zero)
+        title.translatesAutoresizingMaskIntoConstraints = false
+           return title
+       }()
+
+       public lazy var subTitle: UILabel = {
+           let subTitle = UILabel(frame: .zero)
+        subTitle.translatesAutoresizingMaskIntoConstraints = false
+           return subTitle
+       }()
+
+       public lazy var iconImage: UIImageView = {
+           let iconImage = UIImageView(frame: .zero)
+        iconImage.translatesAutoresizingMaskIntoConstraints = false
+           return iconImage
+       }()
+    
+    
     
     func setUpCell() {
         
@@ -22,17 +39,17 @@ final class HomeItem : UITableViewCell {
         self.addSubview(iconImage)
         
         
-        title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
-        title.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        title.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        iconImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5).isActive = true
+        iconImage.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        iconImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         
-        subTitle.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 10).isActive = true
-        subTitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        subTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        title.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 10).isActive = true
+        title.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        title.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
 
-        iconImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        iconImage.widthAnchor.constraint(equalToConstant: 125).isActive = true
-        iconImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        subTitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
+        subTitle.widthAnchor.constraint(equalToConstant: 125).isActive = true
+        subTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
 }

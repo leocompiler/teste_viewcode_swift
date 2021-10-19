@@ -66,35 +66,41 @@ extension HomeViewController: HomeViewDelegate {
     }
 }
 
-extension HomeViewController: UITableViewDelegate {
-
-}
+extension HomeViewController: UITableViewDelegate { }
 
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel!.numberOfRows()
+        return self.viewModel!.numberOfRows()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = HomeItem()
          
-        cell.title.text = viewModel?.title(at: indexPath.row)
-        cell.subTitle.text = viewModel?.subTitle(at: indexPath.row)
-        cell.iconImage.image = icon( (viewModel?.iconImage(at: indexPath.row))! )
+        cell.title.text = self.viewModel?.title(at: indexPath.row)
+        cell.subTitle.text = self.viewModel?.subTitle(at: indexPath.row)
+         
+        convertUrlToObjImage((self.viewModel?.iconImage(at: indexPath.row ))!, homeItem: cell )
         
         cell.setUpCell()
 
         return cell
     }
+    
+    
+    func convertUrlToObjImage(_ urlImage : String , homeItem : HomeItem )  {
+        let url = URL(string: urlImage)
+ 
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            DispatchQueue.main.async {
+                homeItem.iconImage.image  = UIImage(data: data!)
+            }
 
-
-    func icon(_ urlImage : String ) -> UIImage {
-        guard let image = UIImage(named: urlImage) else {
-            //assertionFailure(​ "Missing ​​" + urlImage + "​ asset"​)
-            print("empty urlImage")
-            return UIImage(named: "Default")!
         }
-        return image
+        
+ 
     }
+
+    
 }
