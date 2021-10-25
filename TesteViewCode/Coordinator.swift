@@ -10,6 +10,7 @@ import UIKit
 
 public enum ROUTER {
     case HOME
+    case HOME_DETAIL
     case LOGIN
 }
 

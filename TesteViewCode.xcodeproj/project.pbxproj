@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		936898152720663700151CB9 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936898142720663700151CB9 /* ItemDetail.swift */; };
+		936898182720B0F300151CB9 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936898172720B0F300151CB9 /* ItemViewModel.swift */; };
+		9368981B2721FE7800151CB9 /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368981A2721FE7800151CB9 /* DynamicValue.swift */; };
+		9368981D2722029800151CB9 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368981C2722029800151CB9 /* HomeDataSource.swift */; };
+		9368981F272202B300151CB9 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368981E272202B300151CB9 /* GenericDataSource.swift */; };
 		939CFF75270BB86400BD7F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFF74270BB86400BD7F7B /* AppDelegate.swift */; };
 		939CFF77270BB86400BD7F7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFF76270BB86400BD7F7B /* SceneDelegate.swift */; };
 		939CFF79270BB86400BD7F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFF78270BB86400BD7F7B /* ViewController.swift */; };
@@ -16,12 +21,12 @@
 		939CFF9A270BB86600BD7F7B /* TesteViewCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFF99270BB86600BD7F7B /* TesteViewCodeUITests.swift */; };
 		939CFFA8270CDBA600BD7F7B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFA7270CDBA600BD7F7B /* MainCoordinator.swift */; };
 		939CFFAA270CDBD500BD7F7B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFA9270CDBD500BD7F7B /* Coordinator.swift */; };
-		939CFFB0270CE2E600BD7F7B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFAF270CE2E600BD7F7B /* LoginViewController.swift */; };
+		939CFFB0270CE2E600BD7F7B /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFAF270CE2E600BD7F7B /* Login.swift */; };
 		939CFFB2270CEE8100BD7F7B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB1270CEE8100BD7F7B /* LoginViewModel.swift */; };
 		939CFFB4270CEEC100BD7F7B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB3270CEEC100BD7F7B /* LoginModel.swift */; };
-		939CFFB6270CF18700BD7F7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB5270CF18700BD7F7B /* HomeViewController.swift */; };
+		939CFFB6270CF18700BD7F7B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB5270CF18700BD7F7B /* Home.swift */; };
 		939CFFB8270CF21500BD7F7B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB7270CF21500BD7F7B /* Model.swift */; };
-		939CFFBA270E3CB900BD7F7B /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB9270E3CB900BD7F7B /* HomeItem.swift */; };
+		939CFFBA270E3CB900BD7F7B /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFB9270E3CB900BD7F7B /* HomeItemCell.swift */; };
 		939CFFBC270F22D200BD7F7B /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFBB270F22D200BD7F7B /* ItemModel.swift */; };
 		939CFFBE270F289C00BD7F7B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFFBD270F289C00BD7F7B /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		936898142720663700151CB9 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		936898172720B0F300151CB9 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		9368981A2721FE7800151CB9 /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		9368981C2722029800151CB9 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		9368981E272202B300151CB9 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		939CFF71270BB86400BD7F7B /* TesteViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939CFF74270BB86400BD7F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		939CFF76270BB86400BD7F7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,12 +69,12 @@
 		939CFF9B270BB86600BD7F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939CFFA7270CDBA600BD7F7B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		939CFFA9270CDBD500BD7F7B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		939CFFAF270CE2E600BD7F7B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		939CFFAF270CE2E600BD7F7B /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		939CFFB1270CEE8100BD7F7B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		939CFFB3270CEEC100BD7F7B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		939CFFB5270CF18700BD7F7B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		939CFFB5270CF18700BD7F7B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		939CFFB7270CF21500BD7F7B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		939CFFB9270E3CB900BD7F7B /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		939CFFB9270E3CB900BD7F7B /* HomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
 		939CFFBB270F22D200BD7F7B /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		939CFFBD270F289C00BD7F7B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,9 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		936898192721AA2300151CB9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		939CFF68270BB86400BD7F7B = {
 			isa = PBXGroup;
 			children = (
+				936898192721AA2300151CB9 /* Services */,
 				939CFF73270BB86400BD7F7B /* TesteViewCode */,
 				939CFF8D270BB86600BD7F7B /* TesteViewCodeTests */,
 				939CFF98270BB86600BD7F7B /* TesteViewCodeUITests */,
@@ -120,13 +138,14 @@
 				939CFFAE270CE2B700BD7F7B /* Model */,
 				939CFFAD270CE2AE00BD7F7B /* ViewModel */,
 				939CFFAC270CE2A000BD7F7B /* View */,
+				939CFF80270BB86500BD7F7B /* Assets.xcassets */,
 				939CFF74270BB86400BD7F7B /* AppDelegate.swift */,
+				939CFFA9270CDBD500BD7F7B /* Coordinator.swift */,
 				939CFF76270BB86400BD7F7B /* SceneDelegate.swift */,
 				939CFF78270BB86400BD7F7B /* ViewController.swift */,
-				939CFF80270BB86500BD7F7B /* Assets.xcassets */,
 				939CFF85270BB86500BD7F7B /* Info.plist */,
-				939CFF7D270BB86400BD7F7B /* TesteViewCode.xcdatamodeld */,
 				939CFFA7270CDBA600BD7F7B /* MainCoordinator.swift */,
+				939CFF7D270BB86400BD7F7B /* TesteViewCode.xcdatamodeld */,
 			);
 			path = TesteViewCode;
 			sourceTree = "<group>";
@@ -152,9 +171,11 @@
 		939CFFAC270CE2A000BD7F7B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				939CFFAF270CE2E600BD7F7B /* LoginViewController.swift */,
-				939CFFB5270CF18700BD7F7B /* HomeViewController.swift */,
-				939CFFB9270E3CB900BD7F7B /* HomeItem.swift */,
+				939CFFB9270E3CB900BD7F7B /* HomeItemCell.swift */,
+				939CFFAF270CE2E600BD7F7B /* Login.swift */,
+				939CFFB5270CF18700BD7F7B /* Home.swift */,
+				936898142720663700151CB9 /* ItemDetail.swift */,
+				9368981E272202B300151CB9 /* GenericDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,8 +183,10 @@
 		939CFFAD270CE2AE00BD7F7B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				939CFFB1270CEE8100BD7F7B /* LoginViewModel.swift */,
+				9368981C2722029800151CB9 /* HomeDataSource.swift */,
 				939CFFBD270F289C00BD7F7B /* HomeViewModel.swift */,
+				939CFFB1270CEE8100BD7F7B /* LoginViewModel.swift */,
+				936898172720B0F300151CB9 /* ItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -171,10 +194,10 @@
 		939CFFAE270CE2B700BD7F7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				939CFFA9270CDBD500BD7F7B /* Coordinator.swift */,
 				939CFFB7270CF21500BD7F7B /* Model.swift */,
 				939CFFB3270CEEC100BD7F7B /* LoginModel.swift */,
 				939CFFBB270F22D200BD7F7B /* ItemModel.swift */,
+				9368981A2721FE7800151CB9 /* DynamicValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,13 +334,18 @@
 				939CFF7F270BB86400BD7F7B /* TesteViewCode.xcdatamodeld in Sources */,
 				939CFFAA270CDBD500BD7F7B /* Coordinator.swift in Sources */,
 				939CFF75270BB86400BD7F7B /* AppDelegate.swift in Sources */,
+				936898152720663700151CB9 /* ItemDetail.swift in Sources */,
 				939CFFB4270CEEC100BD7F7B /* LoginModel.swift in Sources */,
-				939CFFB6270CF18700BD7F7B /* HomeViewController.swift in Sources */,
-				939CFFBA270E3CB900BD7F7B /* HomeItem.swift in Sources */,
+				939CFFB6270CF18700BD7F7B /* Home.swift in Sources */,
+				9368981D2722029800151CB9 /* HomeDataSource.swift in Sources */,
+				939CFFBA270E3CB900BD7F7B /* HomeItemCell.swift in Sources */,
 				939CFFBC270F22D200BD7F7B /* ItemModel.swift in Sources */,
+				936898182720B0F300151CB9 /* ItemViewModel.swift in Sources */,
+				9368981B2721FE7800151CB9 /* DynamicValue.swift in Sources */,
 				939CFFB2270CEE8100BD7F7B /* LoginViewModel.swift in Sources */,
 				939CFFBE270F289C00BD7F7B /* HomeViewModel.swift in Sources */,
-				939CFFB0270CE2E600BD7F7B /* LoginViewController.swift in Sources */,
+				939CFFB0270CE2E600BD7F7B /* Login.swift in Sources */,
+				9368981F272202B300151CB9 /* GenericDataSource.swift in Sources */,
 				939CFFB8270CF21500BD7F7B /* Model.swift in Sources */,
 				939CFFA8270CDBA600BD7F7B /* MainCoordinator.swift in Sources */,
 				939CFF77270BB86400BD7F7B /* SceneDelegate.swift in Sources */,

@@ -8,39 +8,28 @@
 import Foundation
 import UIKit
 
-protocol HomeViewDelegate: class {
-    func reloadUI()
-}
-final class HomeViewModel {
+
+struct HomeViewModel {
     
     private let coordinator: Coordinator
-    private var model: [ItemModel]
-
-    weak var delegate : HomeViewDelegate?
-    
-    init( coordinator : Coordinator , model : [ItemModel] ) {
+    weak var dataSource : GenerecDataSource<[ItemModel]>?
+     
+ 
+ 
+    init( coordinator : Coordinator , dataSource : GenerecDataSource<[ItemModel]> ) {
         self.coordinator = coordinator
-        self.model = model
-    }
-    
-    
-    //-- funcs for detail item array
-    
-    public func numberOfRows() -> Int {
-        return model.count
-    }
-    
-    public func title(at index:Int ) -> String {
-        return model[index].title
-    }
+        self.dataSource = dataSource
 
-    public func subTitle(at index:Int ) -> String {
-        return model[index].subTile
+     }
+   
+    func fetch() {
+        
+        let arrayItens = [
+            ItemModel.init(title: "Povos", subTile: "marinhos", iconImage: "https://picsum.photos/200"),
+            ItemModel.init(title: "Dogs", subTile: "terrestres", iconImage: "https://picsum.photos/200") ,
+            ItemModel.init(title: "Cats", subTile: "terrestres", iconImage: "https://picsum.photos/200")
+        ]
+        self.dataSource?.data.value = arrayItens
+        
     }
-    public func iconImage( at index:Int) -> String{
-        return model[index].iconImage
-    }
-    
-    
-
 }

@@ -8,27 +8,40 @@
 import Foundation
 import UIKit
 
-final class HomeItem : UITableViewCell {
+final class HomeItemCell : UITableViewCell {
     
- 
+     
         public lazy var title: UILabel = {
-           let title = UILabel(frame: .zero)
+        let title = UILabel(frame: .zero)
         title.translatesAutoresizingMaskIntoConstraints = false
-           return title
-       }()
+        return title
+        }()
 
-       public lazy var subTitle: UILabel = {
-           let subTitle = UILabel(frame: .zero)
+        public lazy var subTitle: UILabel = {
+        let subTitle = UILabel(frame: .zero)
         subTitle.translatesAutoresizingMaskIntoConstraints = false
-           return subTitle
-       }()
+        return subTitle
+        }()
 
-       public lazy var iconImage: UIImageView = {
-           let iconImage = UIImageView(frame: .zero)
+        public lazy var iconImage: UIImageView = {
+        let iconImage = UIImageView(frame: .zero)
         iconImage.translatesAutoresizingMaskIntoConstraints = false
-           return iconImage
-       }()
-    
+        return iconImage
+        }()
+
+       public var item : ItemModel? {
+            didSet{
+                guard let item = item else {
+                    return
+                }
+                 
+                self.title.text = item.title
+                self.subTitle.text = item.subTile
+                convertUrlToObjImage(item.iconImage)
+                
+                self.setUpCell()
+            }
+       }
     
     
     func setUpCell() {
@@ -52,4 +65,26 @@ final class HomeItem : UITableViewCell {
         subTitle.widthAnchor.constraint(equalToConstant: 125).isActive = true
         subTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
+
+    
+    private func convertUrlToObjImage(_ urlImage : String  )  {
+        let url = URL(string: urlImage)
+ 
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+            DispatchQueue.main.async {
+                 
+                guard let tempImage = UIImage(data: data!)
+                 else  {
+                    print("Erro UIImage create")
+                    return
+                }
+                self.iconImage.image  = tempImage
+            }
+
+        }
+        
+ 
+    }
+    
 }

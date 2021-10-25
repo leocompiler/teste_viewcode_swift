@@ -18,9 +18,6 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-//        let vc = ViewController.init()
-//        navigationController.pushViewController(vc, animated: false)
-        
         let viewModel = LoginViewModel(coordinator: self)
         let vc = LoginViewController(viewModel: viewModel)
         navigationController.pushViewController(vc, animated: true)
@@ -29,10 +26,10 @@ class MainCoordinator: Coordinator {
     
     func routingScreen( router: ROUTER ){
         switch router {
-        case ROUTER.HOME : return navigationController.pushViewController(HomeViewController( self ), animated: true)
-         
+        case ROUTER.HOME : return navigationController.pushViewController(Home( self ), animated: true)
+        case ROUTER.HOME_DETAIL: return navigationController.pushViewController(ItemDetail(), animated: true)
         default:
-            return navigationController.pushViewController(HomeViewController( self ), animated: true)
+            return navigationController.pushViewController(Home( self ), animated: true)
             
             
         }
