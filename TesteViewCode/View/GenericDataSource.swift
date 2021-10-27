@@ -10,4 +10,6 @@ import Foundation
 
 class GenerecDataSource<T> : NSObject {
     var data : DynamicValue<T> = DynamicValue([] as! T)
+    var onSelectRowHandling : ((T) -> Void)?
+
 }

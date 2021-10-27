@@ -12,6 +12,7 @@ public enum ROUTER {
     case HOME
     case HOME_DETAIL
     case LOGIN
+    case CUSTOM_SCREEN_PARAMS
 }
 
 
@@ -20,5 +21,6 @@ protocol Coordinator  {
     var childCoordinators: [Coordinator] {get set}
     var navigationController: UINavigationController {get set}
     func start()
-    func routingScreen( router : ROUTER)
+    func routingScreen( router : ROUTER )
+    func routingScreen( router : ROUTER, viewController : UIViewController)
 }

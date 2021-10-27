@@ -23,11 +23,20 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
        
     }
-    
     func routingScreen( router: ROUTER ){
         switch router {
         case ROUTER.HOME : return navigationController.pushViewController(Home( self ), animated: true)
         case ROUTER.HOME_DETAIL: return navigationController.pushViewController(ItemDetail(), animated: true)
+        default:
+            return navigationController.pushViewController(Home( self ), animated: true)
+            
+            
+        }
+    }
+
+    func routingScreen( router: ROUTER, viewController : UIViewController ){
+        switch router {
+        case .CUSTOM_SCREEN_PARAMS: return navigationController.pushViewController(viewController, animated: true)
         default:
             return navigationController.pushViewController(Home( self ), animated: true)
             

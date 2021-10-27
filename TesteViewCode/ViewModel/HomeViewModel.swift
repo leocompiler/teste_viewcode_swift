@@ -8,20 +8,19 @@
 import Foundation
 import UIKit
 
-
 struct HomeViewModel {
     
     private let coordinator: Coordinator
     weak var dataSource : GenerecDataSource<[ItemModel]>?
-     
- 
- 
+    typealias CompletionHandler = ( ([ItemModel])  -> Void)
+    
+    
+    
     init( coordinator : Coordinator , dataSource : GenerecDataSource<[ItemModel]> ) {
         self.coordinator = coordinator
         self.dataSource = dataSource
-
-     }
-   
+    }
+    
     func fetch() {
         
         let arrayItens = [
@@ -31,5 +30,9 @@ struct HomeViewModel {
         ]
         self.dataSource?.data.value = arrayItens
         
+    }
+    
+    func clickCellTableView( callback : @escaping CompletionHandler ) {
+        self.dataSource?.onSelectRowHandling = callback
     }
 }
