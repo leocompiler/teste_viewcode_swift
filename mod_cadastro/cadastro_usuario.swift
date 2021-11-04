@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class Home_instagram : UIViewController {
+class CadastroUsuario : UIViewController {
     
     override func viewDidLoad() {
         

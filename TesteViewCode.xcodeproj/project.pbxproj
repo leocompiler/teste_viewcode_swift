@@ -15,8 +15,8 @@
 		9368981D2722029800151CB9 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368981C2722029800151CB9 /* HomeDataSource.swift */; };
 		9368981F272202B300151CB9 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368981E272202B300151CB9 /* GenericDataSource.swift */; };
 		9368982227289D9500151CB9 /* ImageConverts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368982127289D9500151CB9 /* ImageConverts.swift */; };
-		93689824272C6EAB00151CB9 /* layout_instagram.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93689823272C6EAB00151CB9 /* layout_instagram.xib */; };
-		93689827272C6F8600151CB9 /* Home_instagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93689826272C6F8600151CB9 /* Home_instagram.swift */; };
+		93689824272C6EAB00151CB9 /* layout_cadastro_usuario.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93689823272C6EAB00151CB9 /* layout_cadastro_usuario.xib */; };
+		93689827272C6F8600151CB9 /* cadastro_usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93689826272C6F8600151CB9 /* cadastro_usuario.swift */; };
 		936898292730924100151CB9 /* ItemRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936898282730924100151CB9 /* ItemRegister.swift */; };
 		9368982B27316CDE00151CB9 /* ItemRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368982A27316CDE00151CB9 /* ItemRegisterViewModel.swift */; };
 		939CFF75270BB86400BD7F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939CFF74270BB86400BD7F7B /* AppDelegate.swift */; };
@@ -71,8 +71,8 @@
 		9368981C2722029800151CB9 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		9368981E272202B300151CB9 /* GenericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
 		9368982127289D9500151CB9 /* ImageConverts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConverts.swift; sourceTree = "<group>"; };
-		93689823272C6EAB00151CB9 /* layout_instagram.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = layout_instagram.xib; sourceTree = "<group>"; };
-		93689826272C6F8600151CB9 /* Home_instagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_instagram.swift; sourceTree = "<group>"; };
+		93689823272C6EAB00151CB9 /* layout_cadastro_usuario.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = layout_cadastro_usuario.xib; sourceTree = "<group>"; };
+		93689826272C6F8600151CB9 /* cadastro_usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cadastro_usuario.swift; sourceTree = "<group>"; };
 		936898282730924100151CB9 /* ItemRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRegister.swift; sourceTree = "<group>"; };
 		9368982A27316CDE00151CB9 /* ItemRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRegisterViewModel.swift; sourceTree = "<group>"; };
 		939CFF71270BB86400BD7F7B /* TesteViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,19 +150,19 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		93689825272C6EE600151CB9 /* Modulo_instagram */ = {
+		93689825272C6EE600151CB9 /* mod_cadastro */ = {
 			isa = PBXGroup;
 			children = (
-				93689823272C6EAB00151CB9 /* layout_instagram.xib */,
-				93689826272C6F8600151CB9 /* Home_instagram.swift */,
+				93689823272C6EAB00151CB9 /* layout_cadastro_usuario.xib */,
+				93689826272C6F8600151CB9 /* cadastro_usuario.swift */,
 			);
-			path = Modulo_instagram;
+			path = mod_cadastro;
 			sourceTree = "<group>";
 		};
 		939CFF68270BB86400BD7F7B = {
 			isa = PBXGroup;
 			children = (
-				93689825272C6EE600151CB9 /* Modulo_instagram */,
+				93689825272C6EE600151CB9 /* mod_cadastro */,
 				939CFF73270BB86400BD7F7B /* TesteViewCode */,
 				939CFF8D270BB86600BD7F7B /* TesteViewCodeTests */,
 				939CFF98270BB86600BD7F7B /* TesteViewCodeUITests */,
@@ -387,7 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93689824272C6EAB00151CB9 /* layout_instagram.xib in Resources */,
+				93689824272C6EAB00151CB9 /* layout_cadastro_usuario.xib in Resources */,
 				939CFF81270BB86500BD7F7B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,7 +526,7 @@
 				936898152720663700151CB9 /* ItemDetail.swift in Sources */,
 				936898292730924100151CB9 /* ItemRegister.swift in Sources */,
 				939CFFB4270CEEC100BD7F7B /* LoginModel.swift in Sources */,
-				93689827272C6F8600151CB9 /* Home_instagram.swift in Sources */,
+				93689827272C6F8600151CB9 /* cadastro_usuario.swift in Sources */,
 				939CFFB6270CF18700BD7F7B /* Home.swift in Sources */,
 				9368981D2722029800151CB9 /* HomeDataSource.swift in Sources */,
 				939CFFBA270E3CB900BD7F7B /* HomeItemCell.swift in Sources */,
