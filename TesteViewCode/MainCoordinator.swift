@@ -26,6 +26,7 @@ class MainCoordinator: Coordinator {
     func routingScreen( router: ROUTER ){
         switch router {
         case ROUTER.HOME : return navigationController.pushViewController(Home( self ), animated: true)
+        case ROUTER.REGISTRAR_ITEM : return navigationController.pushViewController(ItemRegister( self ), animated: true)
         case ROUTER.HOME_DETAIL: return navigationController.pushViewController(ItemDetail(), animated: true)
         default:
             return navigationController.pushViewController(Home( self ), animated: true)

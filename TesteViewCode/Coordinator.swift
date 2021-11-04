@@ -13,6 +13,7 @@ public enum ROUTER {
     case HOME_DETAIL
     case LOGIN
     case CUSTOM_SCREEN_PARAMS
+    case REGISTRAR_ITEM
 }
 
 

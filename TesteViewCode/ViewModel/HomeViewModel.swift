@@ -35,4 +35,8 @@ struct HomeViewModel {
     func clickCellTableView( callback : @escaping CompletionHandler ) {
         self.dataSource?.onSelectRowHandling = callback
     }
+    
+    public func showScreenItemRegister() {
+        coordinator.routingScreen(router : ROUTER.REGISTRAR_ITEM )
+    }
 }

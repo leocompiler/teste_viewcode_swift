@@ -25,10 +25,16 @@ final class Home : UIViewController {
     }()
     
     init(_ route: Coordinator) {
+        
         self.route = route
         self.viewModel =  HomeViewModel( coordinator: route, dataSource: dataSource)
+        let navigationController = route.navigationController
         
         super.init(nibName: nil, bundle: nil)
+        navigationController.navigationItem.hidesBackButton = true
+        navigationController.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(self.action(sender:)))
+        
+        
     }
     
     required init?(coder: NSCoder) {
@@ -39,6 +45,8 @@ final class Home : UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGray2
         self.title = "Fundos Imobiliarios"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.action(sender:)))
+        
         
         tableView.dataSource = self.dataSource
         tableView.delegate = self.dataSource
@@ -48,11 +56,14 @@ final class Home : UIViewController {
         view.addSubview(tableView)
         tableView.register(HomeItemCell.self, forCellReuseIdentifier: "HomeItemCell")
         
-        tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive  = true
-        tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-        
+        NSLayoutConstraint.activate([
+            
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+            
+        ])
         
         self.viewModel.clickCellTableView( callback: { clickItens in
             print( clickItens)
@@ -62,6 +73,11 @@ final class Home : UIViewController {
         
         self.viewModel.fetch()
         
+    }
+    
+    
+    @objc func action(sender: UIBarButtonItem) {
+        viewModel.showScreenItemRegister()
     }
     
 }

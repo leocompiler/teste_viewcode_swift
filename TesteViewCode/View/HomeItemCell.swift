@@ -46,7 +46,7 @@ final class HomeItemCell : UITableViewCell {
     
     func setUpCell() {
         
-        subTitle.textAlignment =  .right
+        subTitle.textAlignment = .right
         self.addSubview(title)
         self.addSubview(subTitle)
         self.addSubview(iconImage)

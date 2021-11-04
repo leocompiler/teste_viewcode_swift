@@ -1,4 +1,4 @@
-`    //
+//
 //  HomeItemDetail.swift
 //  TesteViewCode
 //
@@ -67,22 +67,32 @@ final class ItemDetail : UIViewController {
         view.addSubview(myTitle)
         view.addSubview(subTitle)
         
-        
-        iconImage.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 40).isActive = true
         iconImage.backgroundColor = .red
-        iconImage.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        iconImage.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        //myTitle.backgroundColor = .transpa
+        //subTitle.backgroundColor = .black
         
-        
-        myTitle.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 10).isActive = true
-        
-        myTitle.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        myTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
-        subTitle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10).isActive = true
-        
-        subTitle.widthAnchor.constraint(equalToConstant: 125).isActive = true
-        subTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        let area = self.view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            
+            iconImage.leadingAnchor.constraint(equalTo: area.leadingAnchor ),
+            iconImage.topAnchor.constraint(equalTo: area.topAnchor ),
+            
+            iconImage.widthAnchor.constraint(equalTo: area.widthAnchor ),
+            iconImage.heightAnchor.constraint(equalTo: area.widthAnchor ),
+            
+            
+            myTitle.topAnchor.constraint(equalTo: iconImage.bottomAnchor, constant: 1),
+            myTitle.leadingAnchor.constraint(equalTo: area.leadingAnchor),
+            myTitle.widthAnchor.constraint(equalTo: area.widthAnchor ),
+            //myTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            
+            subTitle.topAnchor.constraint(equalTo: myTitle.bottomAnchor ),
+            subTitle.leadingAnchor.constraint(equalTo: area.leadingAnchor),
+            subTitle.widthAnchor.constraint(equalTo: area.widthAnchor ),
+            //subTitle.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            
+            
+        ])
         
         myTitle.text = item?.title
         subTitle.text = item?.subTile
